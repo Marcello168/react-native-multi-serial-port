@@ -1,8 +1,8 @@
 {
   "name": "react-native-multi-serial-port",
   "title": "React Native Multi Serial Port",
-  "version": "1.0.0",
-  "description": "TODO",
+  "version": "1.0.1",
+  "description": "支持多个安卓串口",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
     "react-native"
   ],
   "author": {
-    "name": "Yong hui.gong",
+    "name": "Yong hui gong",
     "email": "gongyonghui163@163.com"
   },
   "license": "MIT",
@@ -25,7 +25,7 @@
   "bugs": {
       "url": "https://github.com/Marcello168/react-native-multi-serial-port/issues"
   },
-  "homepage": "https://github.com/Marcello168/react-native-multi-serial-port#readme"
+  "homepage": "https://github.com/Marcello168/react-native-multi-serial-port#readme",
   "peerDependencies": {
     "react": "^16.8.1",
     "react-native": ">=0.59.0-rc.0 <1.0.x"
