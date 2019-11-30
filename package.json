@@ -1,7 +1,7 @@
 {
   "name": "react-native-multi-serial-port",
   "title": "React Native Multi Serial Port",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "支持多个安卓串口",
   "main": "index.js",
   "scripts": {

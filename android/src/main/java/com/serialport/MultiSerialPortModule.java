@@ -15,6 +15,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.serialport.serialportlib.DLCSerialPortUtil;
 import com.serialport.serialportlib.ReceiveCallback;
 import com.serialport.serialportlib.SerialPortManager;
+
 import java.util.ArrayList;
 
 
@@ -78,11 +79,14 @@ public class MultiSerialPortModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public  void openSerialPort(String portStr,String Baudrates ){
         WritableMap params = Arguments.createMap();
+        params.putString("linuxDevPath",portStr);
+
         for (SerialPortManager portManager : mPortManagers) {
             String devicePath = portManager.getDevicePath();
             if (devicePath != null && portStr.equals(devicePath)) {
                 params.putBoolean("isSucess",false);
                 params.putString("msg","找不到串口:"+portStr);
+
                 this.reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(onSerialPortOpenStatus,params);
                 return;
             }
